@@ -10882,6 +10882,7 @@ function HttpPouch(opts, callback) {
     }
 
     // Get the missing document/revision IDs
+    opts.ajax = { timeout: 30000 };
     ajax$$1(opts, {
       method: 'POST',
       url: genDBUrl(host, '_revs_diff'),
